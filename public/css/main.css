@@ -1,0 +1,261 @@
+/*** general ***/
+@font-face {
+	font-family: 'Nexa';
+	src: url('webfonts/NexaRegular.otf') format('truetype');
+}
+@font-face {
+	font-family: 'Nexa-Thin';
+	src: url('webfonts/NexaThin.otf') format('truetype');
+}
+@font-face {
+	font-family: 'Nexa-Black';
+	src: url('webfonts/NexaBlack.otf') format('truetype');
+}
+@font-face {
+	font-family: 'Nexa-Bold';
+	src: url('webfonts/NexaBold.otf') format('truetype');
+}
+@font-face {
+	font-family: 'Nexa-Book';
+	src: url('webfonts/NexaBook.otf') format('truetype');
+}
+*{
+	box-sizing: border-box;
+}
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+body {
+	overflow-x: hidden;
+}
+a:hover{
+	text-decoration: none !important;
+}
+a:focus{
+	outline: none !important;
+	text-decoration: none !important;
+}
+.no_margin{
+	margin: 0;
+}
+.no_padding{
+	padding: 0;
+}
+/*** PAGE ***/
+.big_container{
+	position: relative;
+	width: 100%;
+	background-color: #ef402f;
+}
+.content_container{
+    padding-top: 9%;
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+}
+.content_container .col-md-6{
+	height: 100%;
+}
+/*** left_container ***/
+.left_container img {
+	width: auto;
+}
+.left_container .button_play {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 439px;
+    height: 439px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.left_container .button_play img{
+	width: 100%;
+}
+.left_container table{
+	border: 1px solid transparent;
+  	border-collapse: collapse;
+  	background-image: url(../images/background_game.png);
+  	background-size: 100%;
+  	width: 439px;
+    height: 439px;
+}
+.left_container td{
+	text-align: -webkit-center;
+    vertical-align: middle;
+    text-align: center;
+    padding: 0;
+    border: 1px solid #ef402f;
+    cursor: pointer;
+    position: relative;
+}
+.left_container button{
+    background-color: transparent;
+    border: none;
+    width: 123px;
+    height: 123px;
+    padding: 0;
+    cursor: pointer;
+    position: absolute;
+}
+.left_container button:focus{
+    outline: none;
+}
+button[name="L[1]C[1]"]{
+	top: 0;
+	left: 0px;
+}
+button[name="L[1]C[2]"]{
+	top: 0;
+	left: 14px;
+}
+button[name="L[1]C[3]"]{
+	top: 0;
+	left: 24px;
+}
+button[name="L[2]C[1]"]{
+	top: 12px;
+	left: 0;
+}
+button[name="L[2]C[2]"]{
+	top: 12px;
+	left: 14px;
+}
+button[name="L[2]C[3]"]{
+    top: 12px;
+    left: 24px;
+}
+button[name="L[3]C[1]"]{
+	top: 20px;
+	left: 0;
+}
+button[name="L[3]C[2]"]{
+    top: 20px;
+    left: 14px;
+}
+button[name="L[3]C[3]"]{
+    top: 20px;
+    left: 24px;
+}
+/*** answers ***/
+.answers_container{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+}
+#winner, #tie, #loser{
+	display: none;
+	position: relative;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.background{
+    position: absolute;
+    display: block;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 15em;
+    transform: translateY(-50%);
+    font-weight: bold;
+    cursor: pointer;
+}
+@media only screen and (max-width : 1280px){
+	.content_container {
+	    width: 90%;
+	}
+}
+@media only screen and (max-width : 1080px){
+	.content_container {
+	    width: 100%;
+	    padding: 10% 20px 0 20px;
+	}
+}
+@media only screen and (max-width : 992px){
+	.big_container{
+		height: auto !important;
+	}
+	.content_container {
+	    padding: 6% 20px 0 20px;
+	}
+	/*** answers ***/
+	.winner, .tie, .loser{
+		display: none;
+	}
+}
+@media only screen and (max-width : 768px){
+	.background {
+	    font-size: 10em;
+	}
+	.content_container {
+	    padding: 70px 20px 0 20px;
+	}
+	.left_container table{
+	  	width: 90%;
+  	    margin-bottom: 10px;
+	}
+	.left_container button{
+		width: 90%;
+		height: 90%;
+	}
+	.left_container img {
+	    width: 100%;
+	}
+	.left_container .button_play {
+		width: 90%;
+		top: -14px;
+	}
+	/*** answers ***/
+	button[name="L[1]C[1]"] {
+        top: 0;
+    	left: 0px;
+	}
+	button[name="L[1]C[2]"] {
+        top: 0;
+    	left: 11%;
+	}
+	button[name="L[1]C[3]"] {
+        top: 0;
+    	left: 11%;
+	}
+	button[name="L[2]C[1]"] {
+        top: 5%;
+    	left: 0;
+	}
+	button[name="L[2]C[2]"] {
+	    top: 5%;
+    	left: 8%;
+	}
+	button[name="L[2]C[3]"] {
+	    top: 5%;
+	    left: 11%;
+	}
+	button[name="L[3]C[1]"] {
+	    top: 11%;
+	    left: 0px;
+	}
+	button[name="L[3]C[2]"] {
+	    top: 11%;
+	    left: 8%;
+	}
+	button[name="L[3]C[3]"] {
+        top: 11%;
+    	left: 11%;
+	}
+}
+@media only screen and (max-width : 480px){
+	.background {
+	    font-size: 7em;
+	}
+}
